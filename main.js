@@ -1,4 +1,4 @@
-// Merge Sort Implementation in JavaScript
+// Merge Sort
 
 function merge(left, right) {
   let result = [];
@@ -24,7 +24,7 @@ function mergeSort(arr) {
   return merge(left, right);
 }
 
-console.log(mergeSort([8, 7, 6, 5, 4, 3, 2, 1]));
+console.log("Merge Sort", mergeSort([7, 6, 5, 3, 4, 2, 1, 8]));
 
 // Quick Sort
 
@@ -47,7 +47,7 @@ function quickSort(arr) {
   return [...quickSort(left), pivot, ...quickSort(right)];
 }
 
-console.log(quickSort([2, 4, 5, 3, 8, 1]));
+console.log("Quick Sort", quickSort([2, 1, 3, 5, 4]));
 
 // Bubble Sort
 
@@ -65,14 +65,35 @@ function bubbleSort(arr) {
   return arr;
 }
 
-console.log(bubbleSort([10, 5, 3, 8, 1, 2, 15]));
+console.log("Bubble Sort", bubbleSort([3, 2, 1]));
 
-// Recursion
+// isPrime
 
-function fact(n) {
-    if (n === 1) return n;
+function isPrime(n) {
+  if (n <= 2) {
+    return `${n} is not prime`;
+  }
 
-    return n * fact(n-1)
+  for (let i = 2; i < n; i++) {
+    if (n % i === 0) {
+      return `${n} is not prime number`;
+    }
+  }
+  return `${n} is prime number`;
 }
 
-console.log(fact(5))
+console.log("isPrime", isPrime(5));
+console.log("isPrime", isPrime(2));
+console.log("isPrime", isPrime(29));
+console.log("isPrime", isPrime(11));
+
+function factorial(n) {
+  if (n === 1) return n;
+
+  return n * factorial(n - 1);
+}
+
+console.log("factorial", factorial(5));
+console.log("factorial", factorial(2));
+console.log("factorial", factorial(1));
+console.log("factorial", factorial(3));
