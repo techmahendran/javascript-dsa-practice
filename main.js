@@ -87,6 +87,8 @@ console.log("isPrime", isPrime(2));
 console.log("isPrime", isPrime(29));
 console.log("isPrime", isPrime(11));
 
+// factorial
+
 function factorial(n) {
   if (n === 1) return n;
 
@@ -97,3 +99,21 @@ console.log("factorial", factorial(5));
 console.log("factorial", factorial(2));
 console.log("factorial", factorial(1));
 console.log("factorial", factorial(3));
+
+// Promise
+
+const promise = new Promise((reslove, rejected) => {
+  let success = false;
+
+  if (success) {
+    reslove("operation successful");
+  } else {
+    rejected("operation failed");
+  }
+});
+
+promise
+  .then((res) => {
+    console.log(`done ${res}`);
+  })
+  .catch((error) => console.log(`fail ${error}`));
