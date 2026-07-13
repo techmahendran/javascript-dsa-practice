@@ -160,3 +160,52 @@ const fineArr2 = findArr.filter((item, index) => {
 });
 
 console.log(`fineArr2`, fineArr2);
+
+// Count Vowels
+function countVowels(str) {
+  let count = 0;
+
+  for (let char of str.toLowerCase()) {
+    if ("aeiou".includes(char)) {
+      count++;
+    }
+  }
+
+  return count;
+}
+
+console.log(countVowels("Mahendran"));
+
+// Reverse a String
+function reverseString(str) {
+  return str.split("").reverse().join("");
+}
+
+console.log(reverseString("Mahendran"));
+
+// Largest Number for loop
+const arr = [10, 55, 22, 90, 15];
+
+let largest = arr[0];
+
+for (let i = 1; i < arr.length; i++) {
+  if (arr[i] > largest) {
+    largest = arr[i];
+  }
+}
+
+console.log(largest); // 90
+
+// Lowest Number for loop
+const arr = [10, 55, 22, 90, 15, 5];
+
+let min = arr[0];
+
+for (let i = 1; i < arr.length; i++) {
+  if (arr[i] < min) {
+    min = arr[i];
+  }
+}
+
+console.log(min);
+
