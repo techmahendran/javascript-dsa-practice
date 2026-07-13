@@ -117,3 +117,46 @@ promise
     console.log(`done ${res}`);
   })
   .catch((error) => console.log(`fail ${error}`));
+
+// 3 common ways to remove duplicate elements from an array in JavaScript
+
+// 1.
+const arr = [1, 2, 2, 3, 4, 4, 5];
+
+const unique = [...new Set(arr)];
+
+console.log(`remove duplicate`, unique);
+
+// 2.
+
+const arr2 = [1, 2, 2, 3, 4, 4, 5];
+
+const unique2 = arr2.filter((item, index) => {
+  return arr2.indexOf(item) === index;
+});
+
+console.log(`remove duplicate2`, unique2);
+
+// 3.
+
+const arr3 = [1, 2, 2, 3, 4, 4, 5];
+
+const unique3 = [];
+
+for (let i = 0; i < arr3.length; i++) {
+  if (!unique3.includes(arr3[i])) {
+    unique3.push(arr3[i]);
+  }
+}
+
+console.log(`remove duplicate3`, unique3);
+
+// Find duplicate elements from an array in JavaScript
+
+const findArr = [1, 2, 2, 3, 4, 4, 5];
+
+const fineArr2 = findArr.filter((item, index) => {
+  return findArr.indexOf(item) !== index;
+});
+
+console.log(`fineArr2`, fineArr2);
